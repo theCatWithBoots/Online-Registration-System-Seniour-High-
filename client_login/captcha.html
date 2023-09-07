@@ -1,0 +1,166 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert New Record</title>
+<link rel="stylesheet" href="css/style3.css" />
+<script src="css/java.js" /></script>
+</head>
+<body>
+
+        <a href="index.php"> <IMG Src="img/benlife logo.png" Width="350px" Height="100"></a>
+<div style="float: right";>
+         <IMG Src="img/address logo.png" Width="350px" Height="100">
+</div>
+
+</div>
+
+<div style="width:100%; border-radius:0px 0px 0 0;
+			background-color:; color:white; margin:auto;"> 
+
+<ul>
+  <li><a href="index.php">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Beneficiaries</a>
+    <div class="dropdown-content">
+      <a href="Apply.php">Apply Now</a>
+
+    </div>	
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="About.php">About the Systems</a>
+    </div>	
+  </li>
+  <li><a href="logout.php">Logout</a></li>
+</ul>
+
+<div style="color: black;">
+
+<h1>Please comply for security porpuses</h1>
+</font>
+
+<style>
+.capbox {
+	background-color: #92D433;
+	border: #B3E272 0px solid;
+	border-width: 0px 12px 0px 0px;
+	display: inline-block;
+	*display: inline; zoom: 1; /* FOR IE7-8 */
+	padding: 8px 40px 8px 8px;
+	}
+
+.capbox-inner {
+	font: bold 11px arial, sans-serif;
+	color: #000000;
+	background-color: #DBF3BA;
+	margin: 5px auto 0px auto;
+	padding: 3px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+#CaptchaDiv {
+	font: bold 17px verdana, arial, sans-serif;
+	font-style: italic;
+	color: #000000;
+	background-color: #FFFFFF;
+	padding: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+#CaptchaInput { margin: 1px 0px 1px 0px; width: 135px; }
+</style>
+
+<body>
+
+<form method="post" action="insert.php"onsubmit="return checkform(this);"> 
+
+
+<!-- START CAPTCHA -->
+<br>
+<div class="capbox">
+
+<div id="CaptchaDiv"></div>
+
+<div class="capbox-inner">
+Type the above number:<br>
+
+<input type="hidden" id="txtCaptcha">
+<input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+
+</div>
+</div>
+<br><br>
+<!-- END CAPTCHA -->
+
+
+<script type="text/javascript">
+
+// Captcha Script
+
+function checkform(theform){
+var why = "";
+
+if(theform.CaptchaInput.value == ""){
+why += "- Please Enter CAPTCHA Code.\n";
+}
+if(theform.CaptchaInput.value != ""){
+if(ValidCaptcha(theform.CaptchaInput.value) == false){
+why += "- The CAPTCHA Code Does Not Match.\n";
+}
+}
+if(why != ""){
+alert(why);
+return false;
+}
+}
+
+var a = Math.ceil(Math.random() * 9)+ '';
+var b = Math.ceil(Math.random() * 9)+ '';
+var c = Math.ceil(Math.random() * 9)+ '';
+var d = Math.ceil(Math.random() * 9)+ '';
+var e = Math.ceil(Math.random() * 9)+ '';
+
+var code = a + b + c + d + e;
+document.getElementById("txtCaptcha").value = code;
+document.getElementById("CaptchaDiv").innerHTML = code;
+
+// Validate input against the generated number
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+if (str1 == str2){
+return true;
+}else{
+return false;
+}
+}
+
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script>
+
+<input type="submit" value="Continue"><br>
+
+</form>
+
+ <div style="width:100%; font-family:  arial ; padding:5px 0px; background-color:khaki; color:steelblue; margin-top:10px; font-size:18px; text-align:center;">
+			Copyright:  2018
+</div>	
+
+
+
+
+
+
+
+</body>
+</html>
+ 

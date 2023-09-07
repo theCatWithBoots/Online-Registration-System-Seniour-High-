@@ -1,0 +1,125 @@
+html, body {
+        width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0px;
+		
+		}
+		
+	slider {
+
+	    display: block;
+		width: 100%;
+		height: 500;
+		overflow: hidden;
+		position: relative;
+			border-top: solid 5px #1A94C4;
+					border-bottom: solid 5px #1A94C4;
+			
+	}
+	
+	slider > * {
+
+	    position:absolute;
+		display: block;
+		width: 100%;
+		height: 500;
+		background: white;
+		animation: slide 12s infinite;
+		overflow:hidden;
+
+	}
+	
+	slide:nth-child(1) {
+	    left: 0%;
+		animation-delay: -1s;
+		background-image: url(3a.jpg);
+		background-size: cover;
+		background-position: center;
+
+			
+	
+	}
+	
+	slide:nth-child(2) {
+		animation-delay: 2s;
+		background-image: url(6a.jpg);
+		background-size: cover;
+		background-position: center;
+
+			
+	}
+	
+	
+	slide:nth-child(3) {
+		animation-delay: 5s;
+		background-image: url(4a.jpg);
+		background-size: cover;
+		background-position: center;
+
+
+	
+	}
+	
+	
+	slide:nth-child(4) {
+		animation-delay: 8s;
+		background-image: url(5a.jpg);
+		background-size: cover;
+		background-position: center;
+
+	
+	}
+	
+	slide p {
+	    font-family: arial black;
+		font-size: 70px;
+		text-align: center;
+		display: inline-bock;
+		width: 100%;
+		margin-top:340px;
+		margin-bottom:340px;
+		color: white;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: black;
+	}
+	
+	@keyframes slide {
+	     0% {left: 100%; width: 100%;}
+		 5% {left: 0%;}
+		 25% {left: 0%;}
+		 30% {left: -100%; width: 100%;}
+		 30.0001% {left: -100%; width: 0%}
+		 100% {left: 100%; width: 0%;}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
